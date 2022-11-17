@@ -1,0 +1,15 @@
+{
+  "name": "sg-nameserver",
+  "version": "1.0.0",
+  "description": "Nameserver for .stars",
+  "main": "index.js",
+  "repository": "https://github.com/angrymouse/sg-nameserver",
+  "author": "Mouse <nik@hns.is>",
+  "license": "ISC",
+  "private": false,
+  "dependencies": {
+    "bns-plus": "^0.15.2",
+    "json5": "^2.2.1",
+    "node-fetch": "^3.3.0"
+  }
+}
