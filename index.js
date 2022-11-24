@@ -1,5 +1,5 @@
 const bns = require('bns-plus');
-const { wire, DNSServer } = bns;
+
 const JSON5 = require("json5")
 const fs = require("fs");
 const onQuery = require("./onQuery")

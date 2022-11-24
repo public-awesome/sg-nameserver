@@ -1,4 +1,5 @@
 const contractQuery = require("./contractQuery")
+const { wire, DNSServer } = bns;
 module.exports = async (req, res, rinfo) => {
 
     const [question] = req.question;
