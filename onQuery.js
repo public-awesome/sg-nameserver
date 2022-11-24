@@ -7,11 +7,16 @@ module.exports = async (req, res, rinfo) => {
 
         let nameInfo;
         try {
-            nameInfo = await contractQuery(config.nameContract, {
-                "nft_info": {
-                    "token_id": name.slice(0, -config.zone.length)
-                }
-            })
+            nameInfo = global.cache.get(name.slice(0, -config.zone.length))
+            if (!nameInfo) {
+                nameInfo = await contractQuery(config.nameContract, {
+                    "nft_info": {
+                        "token_id": name.slice(0, -config.zone.length)
+                    }
+                })
+                global.cache.set(name.slice(0, -config.zone.length), nameInfo)
+            }
+
             let records = nameInfo?.data?.extension?.records || []
             records = records.filter(record => ["ns1", "ns2", "ns3", "ns4"].includes(record.name))
             // res.records.map()

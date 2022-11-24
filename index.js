@@ -4,6 +4,7 @@ const JSON5 = require("json5")
 const fs = require("fs");
 const onQuery = require("./onQuery")
 global.config = JSON5.parse(fs.readFileSync("./config.json5", "utf8"));
+global.cache = new Map();
 (async () => {
     const server = new bns.DNSServer({
         tcp: true,
