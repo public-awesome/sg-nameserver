@@ -1,5 +1,5 @@
 {
     zone:".stars.",
-    restEndpoint:"https://rest.elgafar-1.stargaze-apis.com",
-    nameContract:"stars1hpyz7kh2tnt2fpt3qfcw3flq2675v6r0uf70msa8x6qlg0wnfylqa94hcs"
+    restEndpoint:"https://rest.stargaze-apis.com/",
+    nameContract:"stars1fx74nkqkw2748av8j7ew7r3xt9cgjqduwn8m0ur5lhe49uhlsasszc5fhr"
 }
